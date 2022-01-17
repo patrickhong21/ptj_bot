@@ -1,5 +1,4 @@
-# ptj_bot
-PDF to JPEG Discord Bot
+# PDF to JPEG Discord Bot
 
 This bot will send pictures into your current discord channel based on a pdf link.
 
