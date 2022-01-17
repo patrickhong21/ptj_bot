@@ -44,6 +44,7 @@ def valid(pdf_link: str, start: int, end: int) -> bool:
 load_dotenv()
 
 bot = commands.AutoShardedBot(commands.when_mentioned_or('!'))
+bot.remove_command("help")
 
 @bot.event
 async def on_ready():
@@ -51,8 +52,13 @@ async def on_ready():
     await bot.change_presence(activity=discord.Game(name="!info for help"))
 
 @bot.command(aliases=['info'])
-async def _help(ctx):
-    await ctx.send("To convert a pdf to images, use '!pdf [discord link]'.")
+async def help(ctx):
+    await ctx.send("To convert a pdf to images, use '!pdf [pdf link] [start] [end]'. \n" +
+    	"Examples: \n" +
+    	'"!pdf website.com/file.pdf" (sends all pages) \n' +
+    	'"!pdf website.com/file.pdf 1 3" (sends pages 1 to 3) \n' +
+    	'"!pdf website.com/file.pdf 5" (sends pages 5 to the end)'
+    	)
 
 @bot.command()
 async def pdf(ctx, pdf_link: str, start: float=1.0, end: float=-1.0):
