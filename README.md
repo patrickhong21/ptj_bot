@@ -14,7 +14,7 @@ Then, add in your discord token at the bottom of the file.
 ## Commands
 Some valid commands include:
 ```
-!pdf website.com/file.pdf" (sends all pages)
+"!pdf website.com/file.pdf" (sends all pages)
 "!pdf website.com/file.pdf 1 3" (sends pages 1 to 3)
 "!pdf website.com/file.pdf 5" (sends pages 5 to the end)
 ```
