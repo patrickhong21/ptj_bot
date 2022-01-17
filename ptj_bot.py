@@ -5,7 +5,6 @@ from discord.ext import commands
 
 #to_image
 import fitz
-from PIL import Image
 import os
 
 #downloading
