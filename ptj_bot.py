@@ -93,7 +93,7 @@ def get_pdf(url: str) -> None:
 	response = requests.get(url)
 	filename.write_bytes(response.content)
 
-def pdf_to_image(pdf_file: str) -> int:
+def pdf_to_image(pdf_file: str) -> None:
 	pdf_file = fitz.open(pdf_file)
 
 	for idx, page in enumerate(pdf_file):
