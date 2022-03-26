@@ -107,7 +107,7 @@ def valid(pdf_link: str, start: int, end: int) -> bool:
 		end != 0 and 
 		re.match("^.*\\.pdf$", pdf_link) and 
 		re.match("^\\d*$", str(start)) and 
-		re.match("^\\d*$", str(end)))
+		re.match("^-?\\d*$", str(end)))
 
 def remove_images() -> None:
 	for path in os.listdir(CURRENT_IMG_DIR):
