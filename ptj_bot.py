@@ -14,12 +14,12 @@ bot.remove_command("help")
 
 @bot.event
 async def on_ready():
-    print('PDFtoJPEG bot ready')
-    await bot.change_presence(activity=discord.Game(name="!info for help"))
+	print('PDFtoJPEG bot ready')
+	await bot.change_presence(activity=discord.Game(name="!info for help"))
 
 @bot.command()
 async def info(ctx):
-    await ctx.send("To use, do: /pdf")
+	await ctx.send("To use, do: /pdf")
 
 @bot.event
 async def on_message(message):
@@ -35,3 +35,4 @@ async def main():
 	await bot.start(config.get_token())
 
 asyncio.run(main())
+
